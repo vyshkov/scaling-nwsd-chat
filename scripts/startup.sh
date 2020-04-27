@@ -16,3 +16,6 @@ microk8s kubectl apply -f $parentdir/003-chat-dep.yaml
 
 echo "04. Setup Traefik <-> Chat ingress route \n"
 microk8s kubectl apply -f $parentdir/004-chat-ingress-route.yaml
+
+echo "05. Current state: \n"
+microk8s kubectl get all --all-namespaces
