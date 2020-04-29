@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+echo "Adding namaspace Kafka"
+microk8s kubectl create ns kafka
+
+echo "Adding incubator helm repo"
+microk8s helm repo add incubator http://storage.googleapis.com/kubernetes-charts-incubator
+
 parentdir="$(dirname "$dir")"
 
 echo "00. Setup Kafka \n"
