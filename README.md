@@ -25,3 +25,6 @@ To kill pod:
 
 To install kafka chart:
 `helm install --name my-kafka --namespace kafka -f 000-helm-kafka.yaml incubator/kafka`
+
+To join topic via kafkacat:
+`kafkacat -b localhost:9092 -t test -C`
