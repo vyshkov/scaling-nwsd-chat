@@ -6,12 +6,16 @@
 - Set-up DNS service in the kubernetes cluster (to discover the kafka)
 
 I tested it on the [Microk8s/Ubuntu](https://www.youtube.com/watch?v=yw4ZtPzG2hA&list=LLwj0OsaxI7OK3Xu7iXkV_zA&index=3&t=29s)
+Also its working fine with Minikube, except you will have to check chat docker images tags and make sure registry ports are correct.
 
 This project contains list of Kubernetes configurations illustrating chat horizontal scaling approach
 
 Please find the chat projeact here: https://github.com/inna-i/nodejs-chat
 
-Kafka list & vreate topic:
+
+## List of commands to experiment with
+
+Kafka list & create topic:
 ```
 kafka-topics --list --zookeeper my-kafka-zookeeper:2181
 kafka-topics --create --zookeeper my-kafka-zookeeper:2181 --replication-factor 1 --partitions 1 --topic test2
