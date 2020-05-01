@@ -1,0 +1,39 @@
+# apiVersion: traefik.containo.us/v1alpha1
+# kind: IngressRoute
+# metadata:
+#   name: app01
+# spec:
+#   entryPoints:
+#     - websecure
+#   routes:
+#   - match: Host(`app01.example.com`)
+#     kind: Rule
+#     services:
+#     - name: app01
+#       port: 8080
+#     middlewares:
+#       - name: traefik-sso@kubernetescrd
+
+
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: simpleingressroute
+  namespace: default
+  annotations:
+    traefik.ingress.kubernetes.io/affinity: "true"
+    traefik.ingress.kubernetes.io/session-cookie-name: "sticky"
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`lvh.me`)
+    kind: Rule
+    services:
+    - name: chat
+      port: 8080
+      sticky:
+        cookie:
+          name: heyy
+    middlewares:
+      - name: default-sso@kubernetescrd
