@@ -28,9 +28,9 @@ spec:
             - name: MIDDLEWARE_URL
               value: "https://auth.nwsd.tk"
             - name: CLIENT_ID
-              value: "2817735458339000"
+              value: "xxx"
             - name: CLIENT_SECRET
-              value: "af63bd25b850861da2008fbb80486c3f"        
+              value: "xxx"        
           ports:
             - name: web
               containerPort: 8125
