@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: auth-middleware
-          image: localhost:32000/node-auth-middleware
+          image: vvyshko/node-auth-middleware
           env:
             - name: COOKIE_DOMAIN
               value: "nwsd.tk"
@@ -30,7 +30,7 @@ spec:
             - name: CLIENT_ID
               value: "2817735458339000"
             - name: CLIENT_SECRET
-              value: "af63bd25b850861da2008fbb80486c3f"        
+              value: "xxx"        
           ports:
             - name: web
               containerPort: 8125

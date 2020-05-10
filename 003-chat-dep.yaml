@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: chat
-          image: localhost:32000/node-web-app
+          image: vvyshko/node-web-app
           env:
             - name: KAFKA_ENABLED
               value: "true"
