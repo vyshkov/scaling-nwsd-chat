@@ -32,3 +32,11 @@ To install kafka chart:
 
 To join topic via kafkacat:
 `kafkacat -b localhost:9092 -t test -C`
+
+To add kubernetes secret:
+```
+kubectl create secret generic traefik-sso \
+--from-literal=clientid=xxx.apps.googleusercontent.com \
+--from-literal=clientsecret=xxx \
+--from-literal=secret=rand
+```
